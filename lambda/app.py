@@ -1,6 +1,3 @@
-import sys
-sys.path.append('/var/task/modules')
-
 import os
 import json
 import requests
