@@ -17,6 +17,10 @@ clova = cek.Clova(
 def handler(event, context):
     print('Received event: ' + json.dumps(event, indent=2))
 
+    # Check if the request is production
+    if 'body' in event.keys():
+        event = json.loads(event['body'])
+
     try:
         if event['request']['type'] == 'LaunchRequest':
             return launch_request_handler()
