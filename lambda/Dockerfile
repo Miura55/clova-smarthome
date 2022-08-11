@@ -7,7 +7,7 @@ COPY app.py ${LAMBDA_TASK_ROOT}
 # from your project folder.
 
 COPY requirements.txt  .
-RUN yum update && \
+RUN yum clean all && yum -y update && \
     pip install --upgrade pip && \
     pip install -r requirements.txt
 
