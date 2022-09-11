@@ -28,7 +28,7 @@ export class ClovaIoThubStack extends Stack {
       cors: {
         allowedMethods: [HttpMethod.ALL],
         allowedOrigins: ['*'],
-      } 
+      }
     });
     new CfnOutput(this, 'FunctionUrl', { value: funcitonUrl.url });
   }
